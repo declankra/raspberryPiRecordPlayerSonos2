@@ -48,7 +48,7 @@ def main():
 
     while True:
         current_tag_id, spotify_uri = idToMp3.get_spotify_uri_for_tag()
-
+        
         if current_tag_id is None and current_tag_id != last_tag_id:
             print("initiating stop")
             sonos.stop_music()
