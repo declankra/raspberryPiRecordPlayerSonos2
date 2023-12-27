@@ -20,27 +20,6 @@ class SonosController:
         print("music stopped")
         response = requests.get(f"{self.api_url}/{self.room}/pause")
         return response.json()
-
-    """
-    def start_music(self, spotify_uri):
-        if not self.is_music_playing():
-            print("setting volume")
-            self.set_volume(50)  # Set volume to 50% if no music is playing
-
-        if "track:" in spotify_uri:
-            uri_type = "spotify"
-            print("making request to NOT shuffle song")
-            requests.get(f"{self.api_url}/{self.room}/shuffle/off")
-        elif "playlist:" in spotify_uri or "album:" in spotify_uri:
-            uri_type = "spotifyplaylist" if "playlist:" in spotify_uri else "spotifyalbum"
-            print("making request to shuffle playlist/album")
-            requests.get(f"{self.api_url}/{self.room}/shuffle/on")
-        else:
-            return {"error": "Invalid Spotify URI"}
-        print("making request to play")
-        response = requests.get(f"{self.api_url}/{self.room}/musicsearch/{uri_type}/play?uri={spotify_uri}")
-        return response.json()
-        """
     
     def start_music(self, spotify_uri):
         # Set volume to 50% if no music is playing
