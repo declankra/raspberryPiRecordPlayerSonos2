@@ -24,7 +24,7 @@ class SonosController:
     def start_music(self, spotify_uri):
         # Set volume to 50% if no music is playing
         if not self.is_music_playing():
-            self.set_volume(50)
+            self.set_volume(35)
         # Adjust the URI to use the correct endpoint for Spotify URIs
         if "track:" in spotify_uri:
             uri_type = 'now'
@@ -37,7 +37,7 @@ class SonosController:
             return {"error": "Invalid Spotify URI"}
 
         # Using Spotify URI directly as per documentation for the endpoint
-        print("makign request to play")
+        print("making request to play")
         response = requests.get(f"{self.api_url}/{self.room}/spotify/{uri_type}/{spotify_uri}")
         return response.json()
 
