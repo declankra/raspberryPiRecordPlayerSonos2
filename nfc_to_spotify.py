@@ -8,5 +8,4 @@ def get_spotify_uri_from_tag(tag_id, json_file='/home/pi/raspberryPiRecordPlayer
         if record['tag_id'] == tag_id:
             print("found tag id in records")
             return record['spotify_URI']
-    print("no tag found")
     return None
