@@ -16,6 +16,7 @@ def read_nfc_tag():
     return None
 
 def get_spotify_uri_for_tag():
+    print("inside get_spotify_uri_for_tag()")
     tag_id = read_nfc_tag()
     if not tag_id:
         return None, None  # No tag detected

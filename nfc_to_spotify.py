@@ -9,13 +9,3 @@ def get_spotify_uri_from_tag(tag_id, json_file='vinylCollection.json'):
             print("found tag id in records")
             return record['spotify_URI']
     return None
-
-"""
-# Example usage
-tag_id = '04151e5fb62a81'  # Replace with actual tag ID
-spotify_uri = get_spotify_uri_from_tag(tag_id)
-if spotify_uri:
-    print("Spotify URI:", spotify_uri)
-else:
-    print("No Spotify URI found for this tag.")
-"""
