@@ -24,5 +24,6 @@ def get_spotify_uri_for_tag():
         return None, None  # No tag detected
     print("return: tag_id == something")
     spotify_uri = get_spotify_uri_from_tag(tag_id)
+    print("nfc_to_spotify() compeleted")
     return tag_id, spotify_uri
 
