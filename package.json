@@ -1,0 +1,22 @@
+{
+  "name": "raspberrypirecordplayersonos2",
+  "version": "1.0.0",
+  "description": "magic record player",
+  "main": "readNfcTag.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/declankra/raspberryPiRecordPlayerSonos2.git"
+  },
+  "author": "declan kramper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/declankra/raspberryPiRecordPlayerSonos2/issues"
+  },
+  "homepage": "https://github.com/declankra/raspberryPiRecordPlayerSonos2#readme",
+  "dependencies": {
+    "nfc-pcsc": "^0.8.1"
+  }
+}
