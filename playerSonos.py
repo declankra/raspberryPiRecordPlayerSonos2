@@ -45,7 +45,7 @@ class SonosController:
 def main():
     sonos = SonosController('http://localhost:5005', 'Family Room')
     last_tag_id = None
-
+    print("inside main()")
     while True:
         current_tag_id, spotify_uri = idToMp3.get_spotify_uri_for_tag()
         
@@ -58,6 +58,7 @@ def main():
                 print("initiating start")
                 sonos.start_music(spotify_uri)
                 last_tag_id = current_tag_id
+        print("neither main() condition is true")
         sleep(1)  # Sleep to prevent a tight loop
 
 if __name__ == "__main__":
