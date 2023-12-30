@@ -24,7 +24,7 @@ class SonosController:
     def start_music(self, spotify_uri):
         # Set volume to 50% if no music is playing
         if not self.is_music_playing():
-            self.set_volume(30)
+            self.set_volume(28)
         # Adjust the URI to use the correct endpoint for Spotify URIs
         if "track:" in spotify_uri:
             uri_type = 'now'
