@@ -5,7 +5,6 @@ def get_spotify_uri_from_tag(tag_id, json_file='/home/pi/raspberryPiRecordPlayer
         vinyl_collection = json.load(file)
     print("searching for uri from vinyl collection")
     for record in vinyl_collection:
-        print(tag_id)
         if record['tag_id'] == tag_id:
             print("found tag id in records")
             return record['spotify_URI']
