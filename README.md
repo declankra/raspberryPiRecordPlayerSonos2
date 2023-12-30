@@ -1,3 +1,4 @@
+# raspberrryPiRecordPlayerSonos2
 tldr: Variation for playing spotify songs through a sonos device using nfc tags as "vinyl records"
 
 !!! Visit notion page for project details and setup: https://www.notion.so/declankramper/raspberryPiRecordPlayerSonos2-64432a48ffa44c0f861dc3d75144c6e3?pvs=4
