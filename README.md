@@ -1,5 +1,5 @@
 # raspberrryPiRecordPlayerSonos2
-tldr: variation for playing spotify songs through a sonos device using nfc tags as "vinyl records"
+**tldr**: variation of original project for playing spotify songs through a **sonos device** using nfc tags as "vinyl records"
 
 !!! Visit notion page for project details and setup: https://www.notion.so/declankramper/raspberryPiRecordPlayerSonos2-64432a48ffa44c0f861dc3d75144c6e3?pvs=4
 
@@ -16,7 +16,7 @@ a “magic record player” device that plays music on a Sonos speaker when a so
 **how does device work?**
 user places nfc tag on top of the reader → reader scans the id of the tag → python program will match the id with a spotify uri → use an http api server to make a call to play the spotify uri on the sonos speaker
 
-### SCRIPTs
+### scripts
 
 1. **playerSonos.py:** the main file. contains SonosController class with functions that make requests to http api server. contains infinite loop main() function that calls the get_spotify_uri_for_tag() function inside idToMp3.py file.
 2. **idToMp3.py:** returns a tag id and spotify uri. it calls the read_nfc_tag() js function that will return a tag id and, if valid, calls the get_spotify_uri_from_tag() function that matches the tag id with a spotify uri.
@@ -26,7 +26,7 @@ user places nfc tag on top of the reader → reader scans the id of the tag → 
 6. **vinylCollection.json:** list of “records” with both tag ids and corresponding spotify uris
 
 
-### Dependencies and downloads required for program
+### dependencies and downloads required for program
 - python3
     - Python 3.9.7
 - node.js
